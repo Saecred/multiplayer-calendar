@@ -1,0 +1,11 @@
+.day {
+    font-weight: bold;
+    color: #590016;
+}
+
+.grid{
+    flex:1;
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(5,1fr);
+}
