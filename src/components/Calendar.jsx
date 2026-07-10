@@ -1,14 +1,23 @@
 import './Calendar.css';
+import WeekdayHeaders from './WeekdayHeaders.jsx';
+import DayCell from './DayCell.jsx';
+
+const days = ["Sun", "Mon","Tues","Wed","Thurs","Fri","Sat"];
+const numCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
 function Calendar() {
     return (
-        <div className="grid">
-           <div className="day">SUN</div>
-           <div className="day">MON</div>
-           <div className="day">TUES</div>
-           <div className="day">WED</div>
-           <div className="day">THURS</div>
-           <div className="day">FRI</div>
-           <div className="day">SAT</div>
+        <div>
+            <div className="headerRow">
+                {days.map((day) => (
+                <WeekdayHeaders day={day} />
+                ))}
+            </div>
+            <div className = "grid">
+                {numCells.map(() =>(
+                    <DayCell />
+                ))}
+            </div>
         </div>
     );
 }

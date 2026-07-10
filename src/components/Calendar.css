@@ -3,9 +3,14 @@
     color: #590016;
 }
 
+.headerRow{
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+}
+
 .grid{
     flex:1;
     display:grid;
     grid-template-columns: repeat(7,1fr);
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(6,1fr);
 }
