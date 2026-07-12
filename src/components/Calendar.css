@@ -14,3 +14,9 @@
     grid-template-columns: repeat(7,1fr);
     grid-template-rows: repeat(6,1fr);
 }
+
+.page{
+  display:flex;
+  flex-direction: column;
+  height: 100vh;
+}

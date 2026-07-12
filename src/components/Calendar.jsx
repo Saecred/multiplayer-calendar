@@ -3,19 +3,19 @@ import WeekdayHeaders from './WeekdayHeaders.jsx';
 import DayCell from './DayCell.jsx';
 
 const days = ["Sun", "Mon","Tues","Wed","Thurs","Fri","Sat"];
-const numCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+const numCells = Array.from({length:42});
 
 function Calendar() {
     return (
-        <div>
+        <div className = "page">
             <div className="headerRow">
                 {days.map((day) => (
-                <WeekdayHeaders day={day} />
+                <WeekdayHeaders day={day} key={day} />
                 ))}
             </div>
             <div className = "grid">
-                {numCells.map(() =>(
-                    <DayCell />
+                {numCells.map((_,index) => (
+                   <DayCell key={index} />
                 ))}
             </div>
         </div>
