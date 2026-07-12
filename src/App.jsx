@@ -5,8 +5,7 @@ function App() {
 
   return (
     <main>
-      <div className="page">
-        <h1>Multiplayer Calendar</h1>
+      <div>
         <Calendar />
       </div>
     </main>

@@ -20,3 +20,7 @@
   flex-direction: column;
   height: 100vh;
 }
+
+.monthRow{
+    height:36px;
+}
