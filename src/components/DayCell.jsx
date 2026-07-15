@@ -3,7 +3,9 @@ import './DayCell.css';
 function DayCell(props) {
     return(
         <div className = "cell">
-            {props.date}
+            <div className = "cellDate">
+                {props.date}
+            </div>
         </div>
     );
 }
