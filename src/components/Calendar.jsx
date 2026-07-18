@@ -18,9 +18,10 @@ function Calendar() {
                 ))}
             </div>
             <div className = "grid">
-                {numCells.map((_,index) => (
+                {numCells.map((_,index) => {
+                    return(
                    <DayCell key={index} date = {index} />
-                ))}
+                )})}
             </div>
         </div>
     );
