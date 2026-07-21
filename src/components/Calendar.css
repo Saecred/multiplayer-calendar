@@ -23,4 +23,11 @@
 
 .monthRow{
     height:36px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.monthName{
+    width: 10rem;
 }
