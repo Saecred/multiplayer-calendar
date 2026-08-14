@@ -66,8 +66,8 @@ function prevMonth(){
                    <DayCell
                    key={index}
                    date = {new Date(year, month, date)}
-                   dateIndex = {date}
-                   monthSize = {daysInMonth}/>
+                   currMonth = {month}
+                   today = {today}/>
                 )})}
             </div>
         </div>
