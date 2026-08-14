@@ -14,7 +14,8 @@ function Calendar() {
     const [month, setMonth] = useState(today.getMonth());
     const [year, setYear] = useState(today.getFullYear());
 
-    const startDay = 3;
+    const startDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
 
     function nextMonth(){
         if (month !== 11)
@@ -60,12 +61,13 @@ function prevMonth(){
             <div className = "grid">
                 {numCells.map((_,index) => {
                     const date = index - startDay + 1;
-                    const validDate = date > 0 && date < 31;
                     return(
 
                    <DayCell
                    key={index}
-                   date = {validDate?date:null} />
+                   date = {new Date(year, month, date)}
+                   dateIndex = {date}
+                   monthSize = {daysInMonth}/>
                 )})}
             </div>
         </div>

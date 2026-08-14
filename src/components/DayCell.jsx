@@ -1,13 +1,21 @@
 import './DayCell.css';
 
 function DayCell(props) {
+    if(props.dateIndex < 1 || props.dateIndex > props.monthSize)
+    {
+        return(
+            <div className = "offCell">
+                <div className = "cellDate">
+                    {props.date.getDate()}
+                </div>
+            </div>
+        )
+    }
     return(
         <div className = "cell">
-            {props.date !== null && (
             <div className = "cellDate">
-                {props.date}
+                {props.date.getDate()}
             </div>
-            )}
         </div>
     );
 }
