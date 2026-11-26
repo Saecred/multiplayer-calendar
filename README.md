@@ -1,4 +1,4 @@
-# Multiplayer Calendar
+# React Calendar
 
 This is a React calendar that displays the current month in a grid view. Users can navigate month-by-month across year boundaries.
 
